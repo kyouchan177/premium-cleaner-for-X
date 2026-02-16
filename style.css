@@ -1,0 +1,12 @@
+/* 
+  CSSによる非表示 
+  属性セレクタを使用して、aria-labelが「プレミアム」の要素などをターゲットにします。
+  Xのクラス名は動的なことが多いため、属性セレクタが最も安定します。
+*/
+a[aria-label="プレミアム"],
+[data-testid="premium-signup-tab"],
+a[aria-label="クリエイタースタジオ"],
+a[href="/i/premium_sign_up"],
+aside[aria-label="プレミアムにサブスクライブ"] {
+  display: none !important;
+}

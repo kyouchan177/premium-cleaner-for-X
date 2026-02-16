@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "premium cleaner for X",
+  "version": "1.0",
+  "description": "Xの表示を整理し、プレミアム関連のボタンやパネルをクリーンアップします。APIや通信には干渉せず、あなたのブラウザ上の表示のみを調整します。",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*"
+      ],
+      "css": [
+        "style.css"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}

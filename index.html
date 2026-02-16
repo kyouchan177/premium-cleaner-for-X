@@ -1,12 +1,310 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
+
 <head>
     <meta charset="UTF-8">
-    <title>Privacy Policy for Premium Cleaner for X</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>premium cleaner for X - Clean up your timeline</title>
+    <meta name="description" content="X (旧Twitter) の表示を整理し、プレミアム関連のボタンやパネルをクリーンアップします。">
+    <style>
+        :root {
+            /* Typical Clean Web Design Variables */
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --primary-color: #007bff;
+            /* Standard Blue */
+            --secondary-text: #666666;
+            --card-bg: #f8f9fa;
+            --border-color: #e9ecef;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: var(--primary-color);
+        }
+
+        header p {
+            margin: 0;
+            font-size: 0.9rem;
+            display: none;
+            /* Hide tagline in header for cleaner look */
+        }
+
+        @media (min-width: 768px) {
+            header p {
+                display: block;
+            }
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h2::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            border: none;
+            padding: 0;
+        }
+
+        .hero h2::after {
+            display: none;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: #555;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+        }
+
+        .gallery {
+            background-color: #f9f9f9;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.03);
+        }
+
+        .privacy-policy {
+            background-color: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .privacy-policy h3 {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            color: #ccc;
+            margin: 5px 0;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Privacy Policy</h1>
-    <p>This extension does not collect or store any user data.</p>
-    <p>It only modifies the visual of X.com or twitter.com locally in your browser.</p>
+
+    <header>
+        <div class="container">
+            <h1>premium cleaner for X</h1>
+            <p>Clean up your timeline. Focus on what matters.</p>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <h2>Social Media Should be Simple.</h2>
+            <h3>This is an unofficial extension and is not affiliated with X Corp.</h3>
+            <p>X (旧Twitter) のプレミアム勧誘や不要なサイドバー表示を整理し、<br>コンテンツに集中できるクリーンな環境を提供します。</p>
+            <div>
+                <!-- GitHub Repository Link -->
+                <a href="https://github.com/kyouchan177/premium-cleaner-for-x" class="btn btn-primary">View on
+                    GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section id="features" class="container">
+            <h2>Features</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Visual Cleanup Only</h3>
+                    <p>ブラウザ上の表示（CSS/DOM）のみを調整します。APIや通信には一切干渉せず、安全に利用できます。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Privacy First</h3>
+                    <p>ユーザーデータは一切収集しません。すべての処理はあなたのブラウザ内で完結します。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Lightweight</h3>
+                    <p>余計な負荷をかけない軽量設計。Xの動作速度に影響を与えません。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2>Screenshots</h2>
+                <div class="gallery-grid">
+                    <img src="./chrome extention shop pic/slide1_r1.jpg" alt="Screenshot 1">
+                    <img src="./chrome extention shop pic/slide2_r1.jpg" alt="Screenshot 2">
+                </div>
+            </div>
+        </section>
+
+        <section id="privacy" class="container">
+            <div class="privacy-policy">
+                <h2>Privacy Policy</h2>
+                <p><strong>Effective Date:</strong> 2026-02-16</p>
+
+                <h3>1. Data Collection</h3>
+                <p>This extension ("premium cleaner for X") does <strong>not</strong> collect, store, or transmit any
+                    user data. It operates entirely locally within your browser.</p>
+
+                <h3>2. Permissions</h3>
+                <p>The extension requires permission to access data on <code>x.com</code> and <code>twitter.com</code>
+                    solely for the purpose of modifying the visual appearance of the web page (hiding specific
+                    elements). No data is read for any other purpose.</p>
+
+                <h3>3. Third-Party Services</h3>
+                <p>This extension does not use any third-party analytics or tracking services.</p>
+
+                <h3>4. Changes to This Policy</h3>
+                <p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page
+                    periodically for any changes.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 premium cleaner for X. All rights reserved.</p>
+            <p>This is an unofficial extension and is not affiliated with X Corp.</p>
+        </div>
+    </footer>
+
 </body>
+
 </html>
